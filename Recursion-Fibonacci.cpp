@@ -7,18 +7,18 @@ using namespace std;
 long double fibo(int x){
     if (x < 2)
         return x;
-    else if (x == 2)
-        return 1;
+    else if (x <= 4)
+        return x-1;
 
     return fibo(x-1) + fibo(x-2);
 
 }
 
 int to_power(int x, int y){
-    int z;
+    
     if (y == 0)
         return 1;
-    z = to_power(x, y/2);
+    int z = to_power(x, y/2);
     z *= z;
 
     if (y%2 != 0)
